@@ -11,10 +11,14 @@
 <body>
   
   <div id="app">
-    <h1>{{ product }}</h1>
+    <h1>The Cart</h1>
+    <div class="cart">Cart : {{ cart }}</div>
+    <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
   </div>
 
   <script src="./app.js"></script>
+
+  <script src="./components/ProductDisplay.js"></script>
 
   <script>
     const mountedApp = app.mount('#app');
